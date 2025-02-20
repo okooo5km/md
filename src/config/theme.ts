@@ -431,9 +431,165 @@ const graceTheme = toMerged(defaultTheme, {
   },
 })
 
+const simpleTheme = toMerged(defaultTheme, {
+  base: {
+  },
+  block: {
+    'container': {},
+    'h1': {
+      'padding': `0.5em 1em`,
+      'border-bottom': `2px solid var(--md-primary-color)`,
+      'font-size': `1.4em`,
+      'text-shadow': `1px 1px 3px rgba(0,0,0,0.05)`,
+    },
+
+    'h2': {
+      'padding': `0.3em 1.2em`,
+      'border-radius': `8px 24px 8px 24px`,
+      'font-size': `1.3em`,
+      'box-shadow': `0 2px 6px rgba(0,0,0,0.06)`,
+    },
+
+    'h3': {
+      'padding-left': `12px`,
+      'font-size': `1.2em`,
+      'border-radius': `6px`,
+      'line-height': `2.4em`,
+      'border-left': `4px solid var(--md-primary-color)`,
+      'border-right': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
+      'border-bottom': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
+      'border-top': `1px solid color-mix(in srgb, var(--md-primary-color) 10%, transparent)`,
+      'background': `color-mix(in srgb, var(--md-primary-color) 8%, transparent)`,
+      'color': `var(--md-primary-color)`,
+    },
+
+    'h4': {
+      'font-size': `1.1em`,
+      'border-radius': `6px`,
+    },
+
+    'h5': {
+      'font-size': `1em`,
+      'border-radius': `6px`,
+    },
+
+    'h6': {
+      'font-size': `1em`,
+      'border-radius': `6px`,
+    },
+
+    'p': {
+    },
+
+    'blockquote': {
+      'font-style': `italic`,
+      'padding': `1em 1em 1em 2em`,
+      'border-left': `4px solid var(--md-primary-color)`,
+      'border-radius': `6px`,
+      'color': `rgba(0,0,0,0.6)`,
+      'margin-bottom': `1em`,
+      'border-bottom': `0.2px solid rgba(0, 0, 0, 0.04)`,
+      'border-top': `0.2px solid rgba(0, 0, 0, 0.04)`,
+      'border-right': `0.2px solid rgba(0, 0, 0, 0.04)`,
+    },
+
+    'blockquote_p': {
+    },
+
+    'markdown-alert': {
+      'font-style': `italic`,
+    },
+
+    'code_pre': {
+      border: `1px solid rgba(0, 0, 0, 0.04)`,
+    },
+
+    'code': {
+      'white-space': `pre-wrap`,
+      'font-family': `'Fira Code', Menlo, Operator Mono, Consolas, Monaco, monospace`,
+    },
+
+    'image': {
+      'border-radius': `8px`,
+      'border': `1px solid rgba(0, 0, 0, 0.04)`,
+    },
+
+    'ol': {
+      'padding-left': `1.5em`,
+    },
+
+    'ul': {
+      'list-style': `none`,
+      'padding-left': `1.5em`,
+    },
+
+    'footnotes': {
+
+    },
+
+    'figure': {
+
+    },
+
+    'hr': {
+      height: `1px`,
+      border: `none`,
+      margin: `2em 0`,
+      background: `linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0))`,
+    },
+  },
+  inline: {
+    listitem: {
+      margin: `0.5em 8px`,
+    },
+
+    codespan: {
+    },
+
+    em: {
+    },
+
+    link: {
+    },
+
+    wx_link: {
+    },
+
+    strong: {
+    },
+
+    table: {
+      'border-collapse': `separate`,
+      'border-spacing': `0`,
+      'border-radius': `8px`,
+      'margin': `1em 8px`,
+      'color': `hsl(var(--foreground))`,
+      'box-shadow': `0 4px 6px rgba(0,0,0,0.1)`,
+      'overflow': `hidden`,
+    },
+
+    thead: {
+      color: `#fff`,
+    },
+
+    td: {
+      padding: `0.5em 1em`,
+    },
+
+    footnote: {
+      color: `rgba(0,0,0,0.5)`,
+    },
+
+    figcaption: {
+
+    },
+  },
+})
+
 export const themeMap = {
   default: defaultTheme,
   grace: graceTheme,
+  simple: simpleTheme,
 }
 
 export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
@@ -445,6 +601,11 @@ export const themeOptions: IConfigOption<keyof typeof themeMap>[] = [
   {
     label: `优雅`,
     value: `grace`,
+    desc: ``,
+  },
+  {
+    label: `简约`,
+    value: `simple`,
     desc: ``,
   },
 ]
