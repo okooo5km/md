@@ -1,0 +1,4 @@
+/md/static/css/*
+  Content-Type: text/css
+/md/static/js/*
+  Content-Type: application/javascript
